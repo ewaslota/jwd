@@ -8,7 +8,10 @@ ORDER BY ModifiedDate DESC;
 SELECT EmailAddress, LastName, FirstName FROM Person.Contact
 ORDER BY LastName DESC, FirstName ASC;
 --wszystkie wiersze z tabeli Person.Contact zawieraj¹ce ‘Michael’ w kolumnie FirstName, posortowane wg kolumny Lastname
+SELECT * FROM Person.Contact WHERE FirstName = 'Michael'
+ORDER BY LastName;
 --wszystkie dane kontaktowe (tabela Person.Contact) osób o innym imieniu ni¿ ‘Michael’ i nazwisku zaczynaj¹cym siê na Ac (zapytanie zwróci 4 wiersze)
+SELECT EmailAddress, LastName, FirstName,  FROM Person.Contact WHERE FirstName <> 'Michael' WHERE LastName LIKE '%Ac';
 --wszystkie dane kontaktowe zmodyfikowane miêdzy 1, a 22 wrzeœnia 2003 (928 wierszy)
 --10 ostatnio zatrudnionych pracowników
 --10 najstarszych pracowników p³ci ¿eñskiej
