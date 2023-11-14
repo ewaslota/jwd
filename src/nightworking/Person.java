@@ -7,9 +7,9 @@ package nightworking;
  * Użyj konstruktora, setterów i getterów.
  */
 public class Person {
-    String firstname;
-    String surname;
-    int age;
+    private String firstname;
+    private String surname;
+    private int age;
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
