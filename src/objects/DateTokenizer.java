@@ -2,7 +2,7 @@ package objects;
 
 import java.util.StringTokenizer;
 
-public class DataTokenizer {
+public class DateTokenizer {
     public static void main(String[] args) {
         StringTokenizer st;
 
