@@ -1,4 +1,4 @@
-package nightworking;
+package nightworking.person;
 
 /**
  * Stwórz Niedżwiedzia, który będzie brązowy, 1,80 m wzrostu, będzie biegał z prędkością 70 km/h i będzie ryczał z natężeniem

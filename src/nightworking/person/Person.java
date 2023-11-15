@@ -1,4 +1,4 @@
-package nightworking;
+package nightworking.person;
 
 
 /**
