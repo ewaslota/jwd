@@ -58,6 +58,10 @@ public class Bear {
         this.dB = dB;
     }
 
+    public static void scare() {
+        System.out.println("Łuuuuuuuuu....");
+    }
+
     public void viewDetails() {
         System.out.println("Bear details:");
         System.out.println("Color: " + this.getColor());
@@ -69,5 +73,7 @@ public class Bear {
     public static void main(String[] args) {
         Bear bear = new Bear("brown", 180, 70, 90);
         bear.viewDetails();
+
+        Bear.scare();
     }
 }

@@ -88,6 +88,7 @@ public class Person2 {
         System.out.println("Kolor włosów: " + this.getColorOfHair());
         System.out.println("Kolor oczu: " + this.getColorOfEyes());
     }
+
     public static void main(String[] args) {
         Person2 person2 = new Person2("Rafał", "Samek", 41,180, 90, "brown", "blue");
         person2.viewDetails();
