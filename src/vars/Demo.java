@@ -15,7 +15,7 @@ public class Demo {
 
         System.out.println(a);
 
-        String word="abc";
+        String word = "abc";
         String name = "Agata";
 
         String mainProtocol;
@@ -48,14 +48,14 @@ public class Demo {
         double v = 0.0000000000000001d;
 
         System.out.println(v);
-        System.out.printf("%.20f" , v);
+        System.out.printf("%.20f" , v);// % jakaś wartość, dwadzieścia miejsc po przecinku, f float
         System.out.println();
         System.out.printf(new Locale( "US"), "%.23f" , v);
         System.out.println();
 
         double e = 3E-10;
 
-        DecimalFormat dc = new DecimalFormat("#.##########");
+        DecimalFormat dc = new DecimalFormat("#.##########");// #.##### wzorzec tj. pattern
         System.out.println(dc. format(e));
 
         int jackpot = 3_500_000;
@@ -71,10 +71,10 @@ public class Demo {
         int hex = 0xFF; // heksadecymalnie (szesnastkowo)
         System.out.println (hex); //od 0 do 9 używany cyfr , od 10 do 15 używamy liter od a do f
 
-        boolean choosen = true;
+        boolean chosen = true;
         char key = 'a';
 
-        String pasword = "hasło";
+        String password = "hasło";
         String message = "raz\tdwa\ttrzy";// \t - znak tabulacjii, \n -znak nowej lini
 
         System.out.println(message);
