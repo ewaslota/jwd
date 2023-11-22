@@ -10,11 +10,12 @@ public class BirthdateTokenizer {
         String birthdate = "29/04/2016";
 
         StringTokenizer stringTokenizer = new StringTokenizer(birthdate, "/");
-        System.out.println(stringTokenizer.nextToken());
-        System.out.println(stringTokenizer.nextToken());
-        System.out.println(stringTokenizer.nextToken());
 
-        //druga wersja
+        System.out.println(stringTokenizer.nextToken());
+        System.out.println(stringTokenizer.nextToken());
+        System.out.println(stringTokenizer.nextToken());
+        System.out.println();
+
         System.out.println(birthdate.substring(0, 2));
         System.out.println(birthdate.substring(3, 5));
         System.out.println(birthdate.substring(6, 10));
