@@ -1,5 +1,7 @@
 package nightworking.objects;
 
+import java.util.Objects;
+
 /**
  * Create a class Tea with private attributes size, kind and sugar
  * Use setters, getters and constructor.
@@ -47,8 +49,15 @@ public class Tea {
         System.out.println("Countity of sugar " + getSugar());
     }
 
+    public boolean equals(Tea obj) {
+        return this.size == obj.size && this.kind.equals(obj.kind) && this.sugar == obj.sugar;
+    }
+
     public static void main(String[] args) {
-        Tea tea = new Tea('M', "Earl Grey", 2);
-        tea.showDetails();
+        Tea tea1 = new Tea('M', "Earl Grey", 2);
+        Tea tea2 = new Tea('M', "Earl Grey", 2);
+
+        System.out.println(tea1.equals(tea2));
+        tea1.showDetails();
     }
 }

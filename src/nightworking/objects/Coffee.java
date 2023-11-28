@@ -1,5 +1,7 @@
 package nightworking.objects;
 
+import java.util.Objects;
+
 /**
  * Create a class coffee with private attributes size, kind and sugar.
  * Create a method showing details.
@@ -48,10 +50,19 @@ public class Coffee {
         System.out.println("Kind: " + getKind());
         System.out.println("Sugar: " + getSugar() + " items");
     }
-    public static void main(String[] args) {
-        Coffee coffee = new Coffee(400, "White coffee", 3);
 
-        coffee.showDetails();
+    public boolean equals(Coffee obj) {
+        return this.size == obj.size && this.kind.equals(obj.kind) && this.sugar == obj.sugar;
+    }
+
+    public static void main(String[] args) {
+        Coffee coffee1 = new Coffee(400, "White coffee", 3);
+        Coffee coffee2 = new Coffee(400, "White coffee", 3);
+
+        System.out.println(coffee1.equals(coffee2));
+
+
+        coffee1.showDetails();
     }
 
 }
