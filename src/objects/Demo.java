@@ -13,7 +13,7 @@ public class Demo {
 
         String s1, s2;
         s1 = String.valueOf(550);
-        s2 = s1.valueOf(550);
+        s2 = s1.valueOf(550);// zapis mylący bo to metoda narzędziowa statyczna
 
         System.out.println(s1);
         System.out.println(s2);
