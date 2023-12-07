@@ -1,4 +1,4 @@
-package nightworking.arrayes;
+package nightworking.arrays;
 
 /**
  * Napisz program, który znajdzie najczęściej występującą cyfrę w tablicy.
