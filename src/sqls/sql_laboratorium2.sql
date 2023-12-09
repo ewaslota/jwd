@@ -6,15 +6,15 @@ CREATE SCHEMA Forum;
 GO
 
 CREATE TABLE Topics (
-ID int
-ParentID int
-CreateTime datetime
-TopicSubject nvarchar(128)
-TopicBody nvarchar(MAX)
-AuthorID int
-ClueID int
-ViewsCnt int
-AnswersCnt int
+	ID int
+	ParentID int
+	CreateTime datetime
+	TopicSubject nvarchar(128)
+	TopicBody nvarchar(MAX)
+	AuthorID int
+	ClueID int
+	ViewsCnt int
+	AnswersCnt int
 )
 
 CREATE TABLE UserStats (
