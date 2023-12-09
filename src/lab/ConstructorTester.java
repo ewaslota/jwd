@@ -1,4 +1,5 @@
 package lab;
+
 /**
  * klasa C dziedziczyła po klasie B, a klasa B dziedziczyła po klasie A
  * instrukcja new C(); lub new B(); lub new A(); wyświetliła kolejno informacje o wywoływaniu poszczególnych konstruktorów wszystkich klas
@@ -17,40 +18,43 @@ public class ConstructorTester {
         new C(true);
     }
 }
-    class A {
-         public A() {
-             System.out.println("Działa konstruktor A");
-        }
-        public A(boolean silent) {
-             if (!silent) {
+
+class A {
+    public A() {
+        System.out.println("Działa konstruktor A");
+    }
+
+    public A(boolean silent) {
+        if (!silent) {
             System.out.println("Działa konstruktor A" + silent + ")");
         }
 
     }
+}
 
-    class B extends A {
-        public B() {
-            System.out.println("Działa konstruktor B");
-        }
-        public B(boolean silent) {
-            super(true);
-            if (!silent) {
-                System.out.println("Działa konstruktor B" + silent + ")");
-            }
-        }
-
+class B extends A {
+    public B() {
+        System.out.println("Działa konstruktor B");
     }
 
-    class C extends B {
-        public C() {
-            System.out.println("Działa konstruktor C");
+    public B(boolean silent) {
+        super(true);
+        if (!silent) {
+            System.out.println("Działa konstruktor B" + silent + ")");
         }
-        public C(boolean silent) {
-            super(true);
-            if (!silent) {
-                System.out.println("Działa konstruktor C" + silent + ")");
-            }
-        }
+    }
 
+}
+
+class C extends B {
+    public C() {
+        System.out.println("Działa konstruktor C");
+    }
+
+    public C(boolean silent) {
+        super(true);
+        if (!silent) {
+            System.out.println("Działa konstruktor C" + silent + ")");
+        }
     }
 }
