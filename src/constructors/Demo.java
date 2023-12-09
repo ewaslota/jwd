@@ -35,7 +35,7 @@ class B extends A {
         System.out.println("Działą konstruktor B()");
     }
     public B(String param) {
-    //    super(param);
+        super(param);
         System.out.println("Działą konstruktor B(" + param + ")");
     }
 }
