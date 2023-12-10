@@ -14,8 +14,10 @@ public class FinalTester /**extends String - nie może dziedziczyć po klasie St
         System.out.println(f3.number);
 
         //zmieniamy pole statyczne
-        f3.number = 3;
+        f3.number = 99;
 
+        System.out.println(f1.number);
+        System.out.println(f2.number);
         System.out.println(f3.number);
     }
 
