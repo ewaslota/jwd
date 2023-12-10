@@ -1,14 +1,22 @@
 package constructors;
 
 public class Demo {
-//    Demo(String msg) {
-//    System.out.println(msg);
+    //Demo() {} domyślny, nie trzeba go pisać
 
-    //Demo() {} - nie trzeba wypisać ponieważ jest przypisany domyślnie
-    //Demo demo = new Demo();
+    Demo() {}
 
+    Demo(String msg) {
+        System.out.println(msg);
+    }
     public static void main(String[] args) {
+        Demo demo1 = new Demo();
+        Demo demo2 = new Demo("Hello");
+
+        new A();
         new B();
+
+        new A("Hello");
+        new B("Hello");
     }
 }
 class A {
@@ -17,7 +25,7 @@ class A {
         System.out.println("Działa konstruktor A()");
     }
     public A(String param){
-        System.out.println("Działa konstruktor A()" + param + ")");
+        System.out.println("Działa konstruktor A(" + param + ")");
     }
 }
 
@@ -27,8 +35,8 @@ class B extends A {
         System.out.println("Działą konstruktor B()");
     }
     public B(String param) {
-    //    super(param);
-        System.out.println("Działą konstruktor B()" + param + ")");
+        super(param);
+        System.out.println("Działą konstruktor B(" + param + ")");
     }
 }
 

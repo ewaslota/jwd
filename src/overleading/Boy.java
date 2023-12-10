@@ -7,7 +7,7 @@ package overleading;
 public class Boy extends Human {
 
     public void eat() {
-        System.out.println("Zjedz truskawkę");
+        System.out.println("Chłopiec je");
     }
     public static void main(String[] args) {
         Human human = new Human();

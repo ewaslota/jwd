@@ -35,26 +35,22 @@ public class Box {
     }
 
     void printBox() {
-        System.out.println("Box: <" + this.x1 + ", " + this.y1);
+        System.out.print("Box: <" + this.x1 + ", " + this.y1);
         System.out.println("; " + this.x2 + ", " + this.y2 + ">");
     }
     public static void main(String[] args) {
         Box rect = new Box();
+
+        System.out.println("Tworzymy Box ze współrzędnymi (25, 25) i (50, 50)");
         rect.buildBox(25, 25, 50, 50);
-        System.out.println("Tworzymy Box ze współrzędnymi (25, 25) i (50,50)");
+        rect.printBox();
 
-        rect.buildBox(25, 25, 50, 50);
-        System.out.println("Tworzymy Box punktami (10, 10) i (20,20)");
-        Point topLeft = new Point(10,10);
-        Point bottomRight = new Point(20,20);
-        rect.buildBox(topLeft, bottomRight);
+        System.out.println("\n\nTworzymy Box ze współrzędnymi (10, 10) i (20, 20)");
+        rect.buildBox(new Point(10, 10), new Point(20, 20));
+        rect.printBox();
 
-//        rect.buildBox(25, 25, 50, 50);
-//        System.out.println("\n\nTworzymy Box punkterm(7,9) i (20,20)");
-//        Point topLeft = new Point(10,10);
-//        Point bottomRight = new Point(20,20);
-//        rect.buildBox(topLeft, bottomRight);
-
-        
+        System.out.println("\n\nTworzymy Box z punktem (7, 9), szerokością 50 i wysokością 20");
+        rect.buildBox(new Point(7, 9), 50, 20);
+        rect.printBox();
     }
 }
