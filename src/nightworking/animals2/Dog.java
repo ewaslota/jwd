@@ -1,6 +1,6 @@
-package nightworking.animals;
+package nightworking.animals2;
 
-public class Dog extends Animal {
+public class Dog extends Animal2 {
     @Override
     public void eat(String food) {
         System.out.println("Hau hau, mniam mniam...");
