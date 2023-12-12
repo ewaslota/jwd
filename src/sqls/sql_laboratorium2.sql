@@ -28,12 +28,29 @@ GO
 
 CREATE TABLE Forum.User (
 	ID int
-	EmailAddress int
-	Passt datetime
-	Firstname nvarchar(128)
-	Lastname nvarchar(MAX)
+	EmailAddress nvarchar(100)
+	Pass nvarchar(250)
+	Firstname nvarchar(100)
+	Lastname nvarchar(100)
 	RegisterTime datetime
 	RegConfirmTime datetime
 	ForumPostsCnt int
+)
+GO
+
+CREATE TABLE Forum.Clues (
+    ID int
+    Name nvarchar(50)
+    Descript nvarchar(400)
+    TopicsCnt int
+)
+GO
+
+CREATE TABLE Forum.UsersLogins (
+    ID int
+    UserID int
+    LoginTime datetime
+    IPAddress varchar(30)
+    HostName nvarchar(100)
 )
 GO
