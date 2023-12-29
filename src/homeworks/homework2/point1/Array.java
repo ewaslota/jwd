@@ -2,55 +2,66 @@ package homeworks.homework2.point1;
 
 /**
  * /**
- *  * Napisz program, który:
- *  * stworzy tablicę liczb typu int o rozmiarze,
- *  * który będziemy podawać jako argument przy starcie programu,
- *  * wypełni tablicę kolejno liczbami od 1 do n, gdzie n to rozmiar tablicy,
- *  * wyświetli zawartość tablicy,
- *  * dokona konwersji tablicy tak, aby elementy ułożyły się odwrotnie
- *  * (ciąg malejący: n, n-1, n-2… 1),
- *  * wyświetli zawartyość przekonwertowanej tablicy,
- *  * fragmenty programu odpowiadjące za konkretne zadania zostaną wyodrębnione jako
- *  * oddzielne metody.
+ * * Napisz program, który:
+ * * stworzy tablicę liczb typu int o rozmiarze,
+ * * który będziemy podawać jako argument przy starcie programu,
+ * * wypełni tablicę kolejno liczbami od 1 do n, gdzie n to rozmiar tablicy,
+ * * wyświetli zawartość tablicy,
+ * * dokona konwersji tablicy tak, aby elementy ułożyły się odwrotnie
+ * * (ciąg malejący: n, n-1, n-2… 1),
+ * * wyświetli zawartyość przekonwertowanej tablicy,
+ * * fragmenty programu odpowiadjące za konkretne zadania zostaną wyodrębnione jako
+ * * oddzielne metody.
  */
 public class Array {
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
-        int[] array = Array.initializeArray(n);
+        int n = parseArgs(args);
+        int[] array = createArray(n);
         fillArray(array);
         showArray(array);
-        convertArray(array);
+        reverseArray(array);
         showArray(array);
     }
 
-    private static void convertArray(int[] array) {
-        int[] convertedArray = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            convertedArray[i] = array[array.length - i -1];
+    private static int parseArgs(String[] args) {
+        if (args.length == 0) {
+            throw new RuntimeException("No parameter!");
         }
-        for (int i = 0; i < array.length; i++) {
-            array[i] = convertedArray[i];
-        }
+        return Integer.parseInt(args[0]);
     }
 
-    private static void showArray(int[] array) {
-        //1, 2,3,4
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
-            if(i < array.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
+    public static int[] createArray(int n) {
+        return new int[n];
     }
 
-    private static void fillArray(int[] array) {
+    public static void fillArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
     }
 
-    private static int[] initializeArray(int size) {
-        return new int[size];
+    public static void showArray(int[] array) {
+        System.out.print("Array: [");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i + 1 < array.length) {
+                System.out.print(", ");
+            } else {
+                System.out.println("]");
+            }
+        }
+    }
+
+    public static void reverseArray(int[] array) {
+        int index = 0;
+        int reverseIndex = array.length - 1;
+        int value;
+        while (index < reverseIndex) {
+            value = array[index];
+            array[index] = array[reverseIndex];
+            array[reverseIndex] = value;
+            index++;
+            reverseIndex--;
+        }
     }
 }

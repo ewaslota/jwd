@@ -1,5 +1,7 @@
 package homeworks.homework2.point3;
 
+import java.math.BigInteger;
+
 /**
  *Załóżmy, że na pierwsze pole szachownicy kładziemy 1 ziarno pszenicy, na drugie 2 ziarna,
  *  na trzecie 4 ziarna i na każde następne pole dwa razy więcej ziaren niż na pole poprzednie.
@@ -7,13 +9,15 @@ package homeworks.homework2.point3;
  * na szachownicy.
  */
 public class Chessboard {
-
     public static void main(String[] args) {
-        long sum = 0;
-        for (long i = 0; i <= 64; i++) {
-           double powerResult = Math.pow(2, i);
-           sum += (long)powerResult;
+        int squaresBoard = 64;
+        BigInteger sum = BigInteger.ZERO;
+        BigInteger grain = BigInteger.ONE;
+
+        for (int i = 0; i < squaresBoard; i++) {
+            sum = sum.add(grain);
+            grain = grain.multiply(BigInteger.valueOf(2));
         }
-        System.out.println("There are " + sum + " grains on the chessboard");
+        System.out.println("The sum of all the seeds on the chessboard is: " + sum + ".");
     }
 }
