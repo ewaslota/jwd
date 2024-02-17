@@ -1,4 +1,4 @@
-package laboratorium13.package1;
+package packages.laboratorium13.package1;
 
 public class PackageTester {
 

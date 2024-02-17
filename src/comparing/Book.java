@@ -31,6 +31,7 @@ public class Book {
         return year == book.year && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(publisher, book.publisher);
     }
 
+
     @Override
     public String toString() {
         return "Book{" +
