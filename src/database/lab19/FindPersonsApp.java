@@ -2,7 +2,7 @@ package database.lab19;
 
 import java.sql.*;
 
-public class PersonContactGetter {
+public class FindPersonsApp {
     private static final String DB_HOST = "morfeusz.wszib.edu.pl";
     private static final int DB_PORT = 1433;
     private static final String DB_USER = "eslota";
@@ -11,7 +11,7 @@ public class PersonContactGetter {
 
     public static void main(String[] args) {
         String connectionURL = "jdbc:sqlserver://morfeusz.wszib.edu.pl;encrypt=true;trustServerCertificate=true;databaseName=AdventureWorks;user=**********;password=********;";
-        String sql = "select top 10 * from Person.Contact";
+        String sql = "select top 10 * from Person.Contact WHERE LastName = 'Anderson'";
         try(Connection con = DriverManager.getConnection(connectionURL);
             Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
