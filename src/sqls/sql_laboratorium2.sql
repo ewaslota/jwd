@@ -1,28 +1,28 @@
 ﻿-- https://java.mmiklas.wszib.edu.pl/dodatki/lab-sql2.html
 USE eslota
 
-DROP VIEW IF EXISTS Forum.vClues
-DROP VIEW IF EXISTS Forum.vTopics
-DROP VIEW IF EXISTS Forum.vTopicsExtended
-DROP VIEW IF EXISTS Forum.vUsersConfirmedRegistrations
-GO
-
-ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Parent_ID
-ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Author_ID
-ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Clue_ID
-ALTER TABLE Forum.UserStats DROP CONSTRAINT IF EXISTS FK_Forum_UserStats_User_ID
-ALTER TABLE Forum.UserStats DROP CONSTRAINT IF EXISTS FK_Forum_UserStats_Topic_ID
-ALTER TABLE Forum.UsersLogins DROP CONSTRAINT IF EXISTS FK_Forum_UsersLogins_User_ID
-
-DROP TABLE IF EXISTS Forum.Topics
-DROP TABLE IF EXISTS Forum.UserStats
-DROP TABLE IF EXISTS Forum.Users
-DROP TABLE IF EXISTS Forum.Clues
-DROP TABLE IF EXISTS Forum.UsersLogins
-GO
-
-DROP SCHEMA IF EXISTS Forum;
-GO
+-- DROP VIEW IF EXISTS Forum.vClues
+-- DROP VIEW IF EXISTS Forum.vTopics
+-- DROP VIEW IF EXISTS Forum.vTopicsExtended
+-- DROP VIEW IF EXISTS Forum.vUsersConfirmedRegistrations
+-- GO
+--
+-- ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Parent_ID
+-- ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Author_ID
+-- ALTER TABLE Forum.Topics DROP CONSTRAINT IF EXISTS FK_Forum_Topics_Clue_ID
+-- ALTER TABLE Forum.UserStats DROP CONSTRAINT IF EXISTS FK_Forum_UserStats_User_ID
+-- ALTER TABLE Forum.UserStats DROP CONSTRAINT IF EXISTS FK_Forum_UserStats_Topic_ID
+-- ALTER TABLE Forum.UsersLogins DROP CONSTRAINT IF EXISTS FK_Forum_UsersLogins_User_ID
+--
+-- DROP TABLE IF EXISTS Forum.Topics
+-- DROP TABLE IF EXISTS Forum.UserStats
+-- DROP TABLE IF EXISTS Forum.Users
+-- DROP TABLE IF EXISTS Forum.Clues
+-- DROP TABLE IF EXISTS Forum.UsersLogins
+-- GO
+--
+-- DROP SCHEMA IF EXISTS Forum;
+-- GO
 
 CREATE SCHEMA Forum;
 GO
