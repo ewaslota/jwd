@@ -31,7 +31,7 @@ abstract public class MusicPlayer implements Player {
         if (++currentSongIndex >= songs.length) {
             currentSongIndex = 0;
         }
-            System.out.println(playerType + " następny");
+        System.out.println(playerType + " następny");
         play();
     }
 

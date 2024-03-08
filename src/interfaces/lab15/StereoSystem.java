@@ -8,7 +8,7 @@ public class StereoSystem {
         songs[1] = new Song("Pearl Jam", "Even Flow", "Ten");
         songs[2] = new Song("Portishead", "Over", "NYC Live");
 
-        Player[] players = {new StreamingPlayer("Sreaming", songs), new Mp3Player("Mp3", songs), new CDPlayer("CD", songs)};
+        Player[] players = {new StreamingPlayer(songs), new Mp3Player(songs), new CDPlayer(songs)};
         players[0].play();
         players[0].stop();
         players[0].next();

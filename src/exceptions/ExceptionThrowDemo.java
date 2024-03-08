@@ -12,6 +12,7 @@ public class ExceptionThrowDemo {
             System.out.println("Nastąpiła korekta godzin, ponieważ:");
             numberOfSeconds = etd.getNumberofSecond(hours * -1);
         }
+        System.out.println(numberOfSeconds);
     }
 
     public int getNumberofSecond(int hours) {
