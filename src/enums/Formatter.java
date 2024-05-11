@@ -10,7 +10,7 @@ public enum Formatter {
     ,NERVOUS {
         @Override
         public String format(String message) {
-            return "ARGH! Stop bothering me with your mesage: " + message + " !!!";
+            return "ARGH! Stop bothering me with your message: " + message + " !!!";
         }
     };
 
